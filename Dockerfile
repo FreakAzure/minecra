@@ -5,7 +5,8 @@ FROM itzg/minecraft-server
 RUN echo "eula=true" > /data/eula.txt
 
 # Exponer el puerto 25565 para Minecraft
-EXPOSE 25565
+EXPOSE 25575
 
 # Comando por defecto para ejecutar el servidor de Minecraft
+#Another comment
 CMD ["bash", "/start-minecraft.sh"]
