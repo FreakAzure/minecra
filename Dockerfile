@@ -1,14 +1,9 @@
-# Usar la imagen base de itzg/minecraft-server
+# Usa la imagen oficial de itzg para el servidor de Minecraft
 FROM itzg/minecraft-server
 
-# Asegurarnos de que el archivo eula.txt esté establecido en true
-RUN echo "eula=true" > /data/eula.txt
-
-# Exponer el puerto 25565 para Minecraft
+# Expone el puerto del servidor (25565) y RCON (25575) si lo necesitas
 EXPOSE 25565
-
 EXPOSE 25575
 
-# Comando por defecto para ejecutar el servidor de Minecraft
-#Another comment
-CMD ["bash", "/start-minecraft.sh"]
+# No se necesita CMD personalizado; la imagen ya arranca el servidor automáticamente
+# Usa variables de entorno en Railway para configuración
